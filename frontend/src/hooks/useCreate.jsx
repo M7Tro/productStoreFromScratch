@@ -15,6 +15,7 @@ export default function useCreate () {
         if(res.ok){
             setIsPending(false);
             setError(null);
+            console.log("Successfully added to the database:", json);
             return json;
         }else{
             setIsPending(false);

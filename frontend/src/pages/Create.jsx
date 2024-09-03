@@ -11,6 +11,10 @@ export default function Create () {
     //Importing states and method from the custom hook I have created for adding products:
     const {isPending, error, createProduct} = useCreate();
 
+    const handleSubmit = async ()=>{
+        await createProduct(newProduct);
+    }
+
     return (
         <Container maxW={"100vw"} centerContent>  
             <FormControl width={"33%"} textAlign={'center'}>
@@ -26,7 +30,7 @@ export default function Create () {
                 <Input placeholder="Image URL" name="image" type="url" mb={5} value={newProduct.value} onChange={(e)=>{
                     setNewProduct({...newProduct, image: e.target.value})
                 }}></Input>
-                <Button colorScheme="pink" size={'lg'} onClick={()=>{console.log(newProduct)}}>Add</Button>
+                <Button colorScheme="pink" size={'lg'} onClick={()=>{handleSubmit()}} isLoading={isPending}>Add</Button>
             </FormControl>
         </Container>
     )
