@@ -6,10 +6,14 @@ import { CiEdit } from "react-icons/ci";
 
 
 export default function HomePage () {
-    const {products, fetchProducts} = useProduct();
+    const {products, fetchProducts, deleteProduct} = useProduct();
     useEffect(()=>{
         fetchProducts();
     },[fetchProducts])
+
+    const handleDelete = async (productId) => {
+        await deleteProduct(productId);
+    }
     return (
         <div>
             <SimpleGrid columns={{base:1, sm:2, md:3, lg:4}} spacing={"30px"} mx={10}>
@@ -26,8 +30,8 @@ export default function HomePage () {
                                 <Text>${product.price}</Text>
                             </Flex>
                             <Flex>
-                                <IconButton icon={<CiEdit/>}></IconButton>
-                                <IconButton icon={<MdDelete/>}></IconButton>
+                                <IconButton mr={4} icon={<CiEdit/>}></IconButton>
+                                <IconButton icon={<MdDelete/>} onClick={()=>{handleDelete(product._id)}}></IconButton>
                             </Flex>
                         </CardFooter>
                     </Card>

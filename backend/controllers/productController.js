@@ -21,8 +21,9 @@ const addProduct = async (req, res) => {
 
 const deleteProduct = async (req,res)=>{
     try{
-        const id = req.params;
+        const {id} = req.params;
         const deletedProduct = await Product.findByIdAndDelete(id);
+        console.log("Deleted product:", deleteProduct);
         res.status(200).json(deletedProduct);
     }catch(err){
         res.status(500).json({error: err.message});
