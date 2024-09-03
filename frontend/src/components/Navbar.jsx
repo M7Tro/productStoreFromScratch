@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import {Button, HStack, useColorMode, Text, Box, Container, Flex} from "@chakra-ui/react";
+import {Button, HStack, useColorMode, Text, Container, Flex} from "@chakra-ui/react";
 import { FaRegPlusSquare } from "react-icons/fa";
 import { MdOutlineLightMode, MdDarkMode} from "react-icons/md";
 
@@ -21,11 +21,11 @@ export default function Navbar () {
                 </Link>
                 <HStack>
                     <Link to={'/create'}>
-                        <Button>
+                        <Button size='lg'>
                             <FaRegPlusSquare/>
                         </Button>
                     </Link>  
-                    <Button onClick={toggleColorMode}>
+                    <Button size='lg' onClick={toggleColorMode}>
                         {colorMode === "light" ? <MdOutlineLightMode/> : <MdDarkMode/>}
                     </Button>
                 </HStack>

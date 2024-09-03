@@ -50,3 +50,8 @@ For navbar, a container was used. It had afixed width of 1140px, px padding and 
 The two small buttons on the right are in a HStack with some spacing. The Box that contains the App component   changes the background color depending on the color mode using useColorModeValue hook.
 
 Trying to implement this approach, the width of the Container component only changed with maxW prop, not with width. 
+
+Now, I will proceed to build the Create page. 
+
+What is the essence of the Create page? It has a form with inputs: name, price, image url for a product.
+You submit the form and if request is successful, a new product is added to the database. On completion of each request, a chakra toast will be raised.
