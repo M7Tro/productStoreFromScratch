@@ -28,9 +28,11 @@ Added the necessary folders: components and pages. There will be two pages: home
 
 Routing will be done with react-router-dom. I will wrap the app in BrowserRouter and then set up the Routes component. # productStoreFromScratch
 
-Not gonna lie, this seems like the hard part. I don't really understand which chakra component to use with what to achieve the result that I want. 
 
 I'm gonna get the ChakraProvider and wrap the application with it in main.jsx.
 
 I recently made a mistake by using ChakraBaseProvider instead of ChakraProvider. The former is a lighter version that requires more manual styling. 
 
+Not gonna lie, this seems like the hard part. I don't really understand which chakra component to use with what to achieve the result that I want. 
+
+I will admit that now I will watch the tutorial to see how things are done and repeat them until I can do on my own. 
