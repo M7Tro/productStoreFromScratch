@@ -55,3 +55,12 @@ Now, I will proceed to build the Create page.
 
 What is the essence of the Create page? It has a form with inputs: name, price, image url for a product.
 You submit the form and if request is successful, a new product is added to the database. On completion of each request, a chakra toast will be raised.
+
+I've also added toasting messages on success and error. 
+
+I guess it is time to start making the HomePage. 
+
+There will be a global state that stores the products retrieved from the database. It would also account for products added and edited during session.
+
+The global state will be implemented with zustand. It lets you create a hook that returns the state itself and methods you can use to manipulate it. 
+
