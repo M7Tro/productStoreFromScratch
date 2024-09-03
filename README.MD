@@ -41,4 +41,12 @@ I tried to use buttons and useColorMode() on my own to check if it all  works. I
 
 It has a ProductStore gradient button that links to the homepage. And two buttons on the left: one for creating new blogs and one for toggling theme. I have basically already implemented most of it, I just need to add proper alignment and a gradient. 
 
-I did it. I actually implemented an okay-looking navbar using Text, Box, Button, Link components. 
+I did it. I actually implemented an okay-looking navbar using Text, Box, Button, Link, HStack components. 
+
+Now I have decided to watch the tutorial and see how it was done. The App is wrapped in Box with minH prop set to 100vh. Interesting.
+
+For navbar, a container was used. It had afixed width of 1140px, px padding and a Flex component inside. The Flex component changes orientation to column for small screens: {base: "column", sm: "row"}.
+
+The two small buttons on the right are in a HStack with some spacing. The Box that contains the App component   changes the background color depending on the color mode using useColorModeValue hook.
+
+Trying to implement this approach, the width of the Container component only changed with maxW prop, not with width. 
