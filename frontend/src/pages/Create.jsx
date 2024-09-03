@@ -1,4 +1,4 @@
-import {Container, FormControl, FormLabel, Input, Button} from "@chakra-ui/react";
+import {Container, FormControl, FormLabel, Input, Button, Text} from "@chakra-ui/react";
 import {useState} from 'react';
 import useCreate from "../hooks/useCreate";
 
@@ -31,6 +31,12 @@ export default function Create () {
                     setNewProduct({...newProduct, image: e.target.value})
                 }}></Input>
                 <Button colorScheme="pink" size={'lg'} onClick={()=>{handleSubmit()}} isLoading={isPending}>Add</Button>
+                <Text
+                    p={3}
+                    color={"blue"}
+                >
+                    {error}
+                </Text>
             </FormControl>
         </Container>
     )
