@@ -64,3 +64,8 @@ There will be a global state that stores the products retrieved from the databas
 
 The global state will be implemented with zustand. It lets you create a hook that returns the state itself and methods you can use to manipulate it. 
 
+....
+
+
+
+The product cards did not display images at first. I thought I did something wrong with my code, but the problem resolved itself when I simply copied a link to the image using the "image address" button instead of just "link". 
