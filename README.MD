@@ -36,3 +36,9 @@ I recently made a mistake by using ChakraBaseProvider instead of ChakraProvider.
 Not gonna lie, this seems like the hard part. I don't really understand which chakra component to use with what to achieve the result that I want. 
 
 I will admit that now I will watch the tutorial to see how things are done and repeat them until I can do on my own. 
+
+I tried to use buttons and useColorMode() on my own to check if it all  works. It does. Now let's try making the navbar. 
+
+It has a ProductStore gradient button that links to the homepage. And two buttons on the left: one for creating new blogs and one for toggling theme. I have basically already implemented most of it, I just need to add proper alignment and a gradient. 
+
+I did it. I actually implemented an okay-looking navbar using Text, Box, Button, Link components. 
