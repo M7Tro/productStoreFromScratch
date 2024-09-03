@@ -27,3 +27,10 @@ Then I will install the node_modules. Then I install chakra ui.
 Added the necessary folders: components and pages. There will be two pages: homepage with products displayed, and the create page for adding new products with a form. 
 
 Routing will be done with react-router-dom. I will wrap the app in BrowserRouter and then set up the Routes component. # productStoreFromScratch
+
+Not gonna lie, this seems like the hard part. I don't really understand which chakra component to use with what to achieve the result that I want. 
+
+I'm gonna get the ChakraProvider and wrap the application with it in main.jsx.
+
+I recently made a mistake by using ChakraBaseProvider instead of ChakraProvider. The former is a lighter version that requires more manual styling. 
+
