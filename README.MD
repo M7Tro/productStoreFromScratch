@@ -1,3 +1,5 @@
+Deployed at: https://productstore-0ukf.onrender.com
+
 This is my attempt to write the productStore website from scratch: not relying on tutorial. But I am using documentation/articles/chatgpt. 
 
 Backend is express/nodeJS. Packages are: dotenv, mongoose, express.
