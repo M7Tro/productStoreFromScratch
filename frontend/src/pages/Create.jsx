@@ -13,7 +13,6 @@ export default function Create () {
 
     const handleSubmit = async ()=>{
         await createProduct(newProduct);
-        setNewProduct({name:"", price:"", image:""})
     }
 
     return (

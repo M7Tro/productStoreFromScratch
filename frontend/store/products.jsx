@@ -14,5 +14,10 @@ export const useProduct = create((set)=>({
         })
         const json = await res.json();
         set((state)=>({products: state.products.filter(product => product._id !== json._id)}))
+    },
+    editProduct: async(productId, newProductData) => {
+        set((state)=>({
+            products: state.products.map(product => (product._id === productId ? newProductData : product))
+        }))
     }
 }))

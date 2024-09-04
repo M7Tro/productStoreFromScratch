@@ -69,3 +69,15 @@ The global state will be implemented with zustand. It lets you create a hook tha
 
 
 The product cards did not display images at first. I thought I did something wrong with my code, but the problem resolved itself when I simply copied a link to the image using the "image address" button instead of just "link". 
+
+
+
+I have implemented the delete functionality on a product card. Now I will implement the update functionality. 
+
+How will I do it?
+
+When you press the button, a modal pops up with a form that you input. You submit the form and a toast is raised: either success or false. 
+
+Once you submit the edit data, it is sent to the backend API. If a proper object is returned in response, we edit the global state and the change is immediately reflected on the homepage. 
+
+I will try to implement a separate hook that returns isPending, error and editProduct(). editProduct takes in the new product data, send a fetch to udpate everything, receives a response, parces it into json and updates the returned states and the global state.
