@@ -12,7 +12,7 @@ export default function Product ({product}){
         await deleteProduct(productId);
     }
     return (
-        <Card minHeight={"200px"} key={product._id} transition={"all 0.3s"} _hover={{
+        <Card minHeight={"200px"} boxShadow={"2xl"} key={product._id} transition={"all 0.3s"} _hover={{
             transform: "translateY(-10px)"
         }} maxH={"400px"}>
             <Flex overflow={'clip'} alignItems={'center'} height={"90%"} mt={10}>
