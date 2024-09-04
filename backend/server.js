@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import path from 'path';
 
 import ProductRouter from './routes/productRouter.js';
 
@@ -27,4 +28,12 @@ mongoose.connect(process.env.MONGO_URI)
 //routers:
 app.use('/api/products', ProductRouter);
 
-//configuration for deploymeny:
+//configuration for deployment:
+const __dirname = path.resolve();
+
+if(process.env.NODE_ENV === "production"){
+    app.use(express.static(path.join(__dirname, "/frontend/dist")));
+    app.get("*", (req, res)=>{
+        res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"))
+    })
+}

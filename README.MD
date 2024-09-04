@@ -83,3 +83,15 @@ Once you submit the edit data, it is sent to the backend API. If a proper object
 I will try to implement a separate hook that returns isPending, error and editProduct(). editProduct takes in the new product data, send a fetch to udpate everything, receives a response, parces it into json and updates the returned states and the global state.
 
 I made the custom hook for updating the product. Now I will add a pop-up modal.
+
+I have implemented the edit functionality. The modal is stored as a separate component. I think I have everything now.
+
+You can add, delete, edit and view products. There toasts, beautiful buttons and a dark mode toggle button. Project is done.
+
+I only need to enable the deployment functionality. What exactly does it mean? 
+
+I need to add some code in nodejs that checks the process environment. If we are in production, it sets up the dist folder as a staic asset and serves index.html inside it on any request.
+
+The dist folder is in turn a result of building the frontend using vite. To deploy the application on render.com, I will add a script for building and a script for starting in package.json in the root folder. 
+
+Before deployment, I will delete node_modules both in root and in frontend folders. 

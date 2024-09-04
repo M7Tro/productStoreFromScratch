@@ -12,22 +12,23 @@ export default function Create () {
     const {isPending, error, createProduct} = useCreate();
 
     const handleSubmit = async ()=>{
-        await createProduct(newProduct);
+        await createProduct(newProduct); 
+        setNewProduct({name:"", price:"", image:""})
     }
 
     return (
         <Container maxW={"100vw"} centerContent>  
             <FormControl width={"33%"} textAlign={'center'}>
                 <FormLabel>Name of the product</FormLabel>
-                <Input placeholder="Name" name="name" type="text" mb={5} value={newProduct.value} onChange={(e)=>{
+                <Input placeholder="Name" name="name" type="text" mb={5} value={newProduct.name} onChange={(e)=>{
                     setNewProduct({...newProduct, name: e.target.value})
                 }}></Input>
                 <FormLabel>Price</FormLabel>
-                <Input placeholder="Price" name="price" type="number" mb={5} value={newProduct.value} onChange={(e)=>{
+                <Input placeholder="Price" name="price" type="number" mb={5} value={newProduct.price} onChange={(e)=>{
                     setNewProduct({...newProduct, price: e.target.value})
                 }}></Input>
                 <FormLabel>Image URL</FormLabel>
-                <Input placeholder="Image URL" name="image" type="url" mb={5} value={newProduct.value} onChange={(e)=>{
+                <Input placeholder="Image URL" name="image" type="url" mb={5} value={newProduct.image} onChange={(e)=>{
                     setNewProduct({...newProduct, image: e.target.value})
                 }}></Input>
                 <Button colorScheme="pink" size={'lg'} onClick={()=>{handleSubmit()}} isLoading={isPending}>Add</Button>

@@ -1,6 +1,6 @@
 import { useProduct} from "../../store/products";
 import {useEffect} from 'react';
-import {SimpleGrid, Card, Image, CardBody, CardFooter, Flex, Text, IconButton, useDisclosure} from "@chakra-ui/react";
+import {SimpleGrid, Card, Image, Flex, CardFooter, Text, IconButton, useDisclosure} from "@chakra-ui/react";
 import { MdDelete } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 import EditModal from "../components/EditModal";
@@ -23,10 +23,10 @@ export default function HomePage () {
                 {products && products.map((product) => (
                     <Card minHeight={"200px"} key={product._id} transition={"all 0.3s"} _hover={{
                         transform: "translateY(-10px)"
-                    }}>
-                        <CardBody>
+                    }} maxH={"400px"}>
+                        <Flex overflow={'clip'} alignItems={'center'} height={"90%"} mt={10}>
                             <Image src={product.image} alt={product.name + " image"}/>
-                        </CardBody>
+                        </Flex>
                         <CardFooter>
                             <Flex width={'100%'} justifyContent={'space-around'}>
                                 <Text>{product.name}</Text>

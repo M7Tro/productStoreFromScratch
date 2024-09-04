@@ -24,7 +24,6 @@ export default function useCreate () {
                 duration: 2000,
                 isClosable: true,
             })
-            return json;
         }else{
             setIsPending(false);
             setError(json.error);
