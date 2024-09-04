@@ -1,8 +1,9 @@
 import { useProduct} from "../../store/products";
 import {useEffect} from 'react';
-import {SimpleGrid, Card, Image, CardBody, CardFooter, Flex, Text, IconButton} from "@chakra-ui/react";
+import {SimpleGrid, Card, Image, CardBody, CardFooter, Flex, Text, IconButton, useDisclosure} from "@chakra-ui/react";
 import { MdDelete } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
+import EditModal from "../components/EditModal";
 
 
 export default function HomePage () {
@@ -10,6 +11,8 @@ export default function HomePage () {
     useEffect(()=>{
         fetchProducts();
     },[fetchProducts])
+
+    const {onOpen, isOpen, onClose} = useDisclosure();
 
     const handleDelete = async (productId) => {
         await deleteProduct(productId);
@@ -30,7 +33,8 @@ export default function HomePage () {
                                 <Text>${product.price}</Text>
                             </Flex>
                             <Flex>
-                                <IconButton mr={4} icon={<CiEdit/>}></IconButton>
+                                <IconButton mr={4} onClick={onOpen} icon={<CiEdit/>}></IconButton>
+                                <EditModal isOpen={isOpen} onClose={onClose} productId={product._id} initialInputs={product}/>
                                 <IconButton icon={<MdDelete/>} onClick={()=>{handleDelete(product._id)}}></IconButton>
                             </Flex>
                         </CardFooter>

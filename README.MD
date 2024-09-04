@@ -81,3 +81,5 @@ When you press the button, a modal pops up with a form that you input. You submi
 Once you submit the edit data, it is sent to the backend API. If a proper object is returned in response, we edit the global state and the change is immediately reflected on the homepage. 
 
 I will try to implement a separate hook that returns isPending, error and editProduct(). editProduct takes in the new product data, send a fetch to udpate everything, receives a response, parces it into json and updates the returned states and the global state.
+
+I made the custom hook for updating the product. Now I will add a pop-up modal.
